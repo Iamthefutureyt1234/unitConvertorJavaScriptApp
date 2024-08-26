@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Parsamehr Jahedan" />
+		<meta name="description" content="An enhanced unit converter allowing conversions between various units of length, mass, temperature, volume, and speed. Includes a history of previous conversions." />
+		<meta name="keywords" content="unit converter, length conversion, mass conversion, temperature conversion, volume conversion, speed conversion, online tool" />
+		<title>Unit Converter</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Unit Converter</h1>
+    <form id="converterForm">
+        <input type="number" id="inputValue" required placeholder="Enter value">
+        <select id="conversionType">
+            <option value="length">Length</option>
+            <option value="mass">Mass</option>
+            <option value="temperature">Temperature</option>
+            <option value="volume">Volume</option>
+            <option value="speed">Speed</option>
+        </select>
+        <select id="inputUnit"></select>
+        <select id="outputUnit"></select>
+        <button type="submit">Convert</button>
+        <button type="button" id="resetButton">Reset</button>
+    </form>
+    <p id="result"></p>
+    <div id="previousConversions">
+        <h2>Previous Conversions</h2>
+        <ul id="conversionList"></ul>
+        <button id="clearHistoryButton">Clear History</button>
+    </div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
