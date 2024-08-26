@@ -52,7 +52,9 @@ function convertUnits(value, from, to, type) {
         if (from === 'f' && to === 'k') return (value - 32) * 5/9 + 273.15;
         if (from === 'k' && to === 'f') return (value - 273.15) * 9/5 + 32;
     }
-    return value * conversions[type][to] / conversions[type][from];
+    // Convert to base unit first, then to target unit
+    const valueInBaseUnit = value * conversions[type][from];
+    return valueInBaseUnit / conversions[type][to];
 }
 
 function loadConversionHistory() {
